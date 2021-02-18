@@ -1,49 +1,43 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
-import Homepage from './homepage.component';
-import {Switch, Route} from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import HomePage from './pages/homepage/homepage.component';
 
-const HomePage = (props)=> {
-  console.log(props);
-  return(
-    <div>
-      <h1>Home Page</h1>
-    </div>
-  )
-}
+const HatsPage = () => {
 
-const TopicsList = ()=> {
-  return(
-    <div>
-      <h1>Topiclist  Page</h1>
-    </div>
-  )
-}
-
-const TopicDetail = ()=> {
-  return(
-    <div>
-      <h1>TopicDeatil  Page</h1>
-    </div>
-  )
+    return (
+        <div>
+            <h1>Hats Page</h1>
+        </div>
+    )
 }
 
 function App() {
-  return  (
-
-        <div > 
-                <Switch>
-                   <Route exact path='/' component={HomePage} /> 
-                   <Route  exact path='/topics' component={TopicsList} /> 
-                   <Route path='/topics/:topicId' component={TopicDetail} /> 
-                </Switch>
-               
+    return (
+        <div>
+          <BrowserRouter>
+           <Switch>
+                <Route exact path='/' component={HomePage}/>
+                <Route path='/hats' component={HatsPage}/>
+            </Switch>
+          </BrowserRouter>
+           
         </div>
-  ) 
-  
-  
-  
+    );
 }
 
 export default App;
+
+// import React from 'react' import './App.css'; import Homepage from
+// './pages/homepage/homepage.component'; import {Switch, Route} from
+// 'react-router-dom' const HomePage = (props)=> {   console.log(props);
+// return(     <div>       <h1>Home Page</h1>     </div>   ) } const TopicsList
+// = ()=> {   return(     <div>       <h1>Topiclist  Page</h1>     </div>   ) }
+// const TopicDetail = ()=> {   return(     <div>       <h1>TopicDeatil
+// Page</h1>     </div>   ) } function App() {   return  (         <div >
+//          <Switch>                    <Route exact path='/'
+// component={HomePage} />                    <Route  exact path='/topics'
+// component={TopicsList} />                    <Route path='/topics/:topicId'
+// component={TopicDetail} />                 </Switch>         </div>   ) }
+// export default App;
