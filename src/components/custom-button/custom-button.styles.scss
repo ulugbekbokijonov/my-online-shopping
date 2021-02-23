@@ -19,4 +19,13 @@
       color: black;
       border: 1px solid black;
     }
-  }
+
+    &.google-sign-in {
+      background-color: blueviolet;
+      color: cornsilk;
+     
+      &:hover {
+        background-color: cadetblue;
+        border: none;
+      }
+  }}
