@@ -13,6 +13,8 @@
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
   
     &:hover {
       background-color: white;
@@ -28,4 +30,16 @@
         background-color: cadetblue;
         border: none;
       }
-  }}
+  }
+    &.inverted {
+      background-color: rgb(182, 83, 83);
+      color: rgb(206, 214, 210);
+      border: 1px solid black;
+       &:hover {
+        background-color:black;
+        color:white;
+        border: none;
+       }
+
+    }
+}
